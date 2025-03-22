@@ -1,0 +1,191 @@
+% mnras_template.tex 
+%
+% LaTeX template for creating an MNRAS paper
+%
+% v3.0 released 14 May 2015
+% (version numbers match those of mnras.cls)
+%
+% Copyright (C) Royal Astronomical Society 2015
+% Authors:
+% Keith T. Smith (Royal Astronomical Society)
+
+% Change log
+%
+% v3.0 May 2015
+%    Renamed to match the new package name
+%    Version number matches mnras.cls
+%    A few minor tweaks to wording
+% v1.0 September 2013
+%    Beta testing only - never publicly released
+%    First version: a simple (ish) template for creating an MNRAS paper
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Basic setup. Most papers should leave these options alone.
+\documentclass[fleqn,usenatbib]{mnras}
+
+% MNRAS is set in Times font. If you don't have this installed (most LaTeX
+% installations will be fine) or prefer the old Computer Modern fonts, comment
+% out the following line
+\usepackage{newtxtext,newtxmath}
+% Depending on your LaTeX fonts installation, you might get better results with one of these:
+%\usepackage{mathptmx}
+%\usepackage{txfonts}
+
+% Use vector fonts, so it zooms properly in on-screen viewing software
+% Don't change these lines unless you know what you are doing
+\usepackage[T1]{fontenc}
+
+% Allow "Thomas van Noord" and "Simon de Laguarde" and alike to be sorted by "N" and "L" etc. in the bibliography.
+% Write the name in the bibliography as "\VAN{Noord}{Van}{van} Noord, Thomas"
+\DeclareRobustCommand{\VAN}[3]{#2}
+\let\VANthebibliography\thebibliography
+\def\thebibliography{\DeclareRobustCommand{\VAN}[3]{##3}\VANthebibliography}
+
+
+%%%%% AUTHORS - PLACE YOUR OWN PACKAGES HERE %%%%%
+
+% Only include extra packages if you really need them. Common packages are:
+\usepackage{graphicx}	% Including figure files
+\usepackage{amsmath}	% Advanced maths commands
+% \usepackage{amssymb}	% Extra maths symbols
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% AUTHORS - PLACE YOUR OWN COMMANDS HERE %%%%%
+
+% Please keep new commands to a minimum, and use \newcommand not \def to avoid
+% overwriting existing commands. Example:
+%\newcommand{\pcm}{\,cm$^{-2}$}	% per cm-squared
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%%
+
+% Title of the paper, and the short title which is used in the headers.
+% Keep the title short and informative.
+\title[Short title, max. 45 characters]{Tidal Features and Remnants in the Milky Way-M31 Merger}
+
+% The list of authors, and the short list which is used in the headers.
+% If you need two or more lines of authors, add an extra line using \newauthor
+\author[P. G. Shea]{
+Peter G. Shea$^{1}$
+\\
+% List of institutions
+$^{1}$Steward Observatory, The University of Arizona, 933 N Cherry Ave, Tucson 85719, US\\
+}
+
+% These dates will be filled out by the publisher
+% \date{Accepted XXX. Received YYY; in original form ZZZ}
+
+% Enter the current year, for the copyright statements etc.
+\pubyear{2025}
+
+% Don't change these lines
+\begin{document}
+\label{firstpage}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+\maketitle
+
+% Abstract of the paper
+\begin{abstract}
+N/A
+\end{abstract}
+
+% Select between one and six entries from the list of approved keywords.
+% Don't make up new ones.
+\begin{keywords}
+Tidal Tails -- Galaxy Evolution -- Milky Way-M31 Merger
+\end{keywords}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+
+Galaxy merging events are the underlying principle of hierarchical galaxy formation theory which proposes accretion of smaller satellites play a significant role galaxy evolution \cite{Wang_Hammer_Athanassoula_Puech_Yang_Flores_2012}. 
+These events involve extreme tidal forces which often result in the creation of unique structures within these interacting systems. 
+Tidal tails and bridges are streams or spindles of stars and gas or dust which are ejected from their host galaxies throughout the merger process due to gravitational forces exerted on the material. 
+They often resemble extended spiral arms which reach out towards (bridge) and away (tail) from the companion satellite \cite{Toomre_Toomre_1972}. 
+The study of this form of mass loss and tidal debris provides significant insight into the initial conditions of merging systems, fate of stripped material, and the tidal forces involved in these events.
+
+
+Studying these tidal remnants of merging events is vital to understand galactic evolution. In particular, these structures can serve as a galactic fossil record of past interactions of galaxies and their satellites past or present \cite{Wang_Hammer_Athanassoula_Puech_Yang_Flores_2012}.  
+Based on the shape, prominence, and other physical characteristics of tidal tails and bridges it is possible to determine the strength of tidal forces, pro- and retrograde interactions, and how strongly bound the tail initially was with implications on star formation \cite{Privon_Barnes_Evans_Hibbard_Yun_Mazzarella_Armus_Surace_2013}. 
+By studying objects which present these features, it is possible to improve current models of galaxy evolution, structure, and merging events. 
+
+
+Current research on galaxy mergers has shown the ubiquitous nature of tidal tails and bridges in these systems and has helped to relate physical properties of these structures to characteristics of the merging system. 
+The orientation of these tails has been related to disk inclination of the encounters between the two objects and overall orbital geometry of the system \cite{Mihos_2004}. 
+Prograde and retrograde encounters also have been shown to created noticeable differences in the strength of the formed tails; prograde encounters create more significant tidal structures compared to retrograde \cite{Privon_Barnes_Evans_Hibbard_Yun_Mazzarella_Armus_Surace_2013}. 
+The length and symmetry of these structures created in both interacting galaxies during a merge has also been shown to largely be determined by the speed or severity of the encounter as well as the mass ratio of the objects \cite{Ji_Peirani_Yi_2014,Toomre_Toomre_1972}. 
+It been shown that slower encounters tend to create more significant tails and that smaller mass ratios result in more significant tidal features as seen in Fig.~\ref{fig:Ji2014_fig}. 
+However, to what extent these remnants can be used to reconstruct all aspects of merging events or identify past events remains open.
+
+\begin{figure}
+	\includegraphics[width=\columnwidth]{Ji2014_fig.png}
+    \caption{Mock images of two mass ratio 1:1 mergers taken from \cite{Ji_Peirani_Yi_2014}.}
+    \label{fig:Ji2014_fig}
+\end{figure}
+
+While many advances have been made in understanding these structures, there are several questions which remain unanswered. 
+Perhaps one of the largest is how long these tidal debris exist for and what their fate is as the system evolves. 
+The relatively faint nature of these structures has made them difficult to detect and therefore absent in many shallow surveys of galaxy populations. 
+Thus, it is unknown whether tidal remnants persist long after the coalescence of merging galaxies or that major mergers which produce these features remain relatively rare. 
+Further, it there has been very little exploration as to what becomes of these structures post-coalescence as they are mostly considered to be transient to the merge itself however some research suggest they could seed stellar streams \cite{Wang_Hammer_Athanassoula_Puech_Yang_Flores_2012}. 
+Addressing these questions as well as how to better identify these features is vital for furthering models of galaxy evolution.
+
+\section{Proposal}
+
+\subsection{This Proposal}
+\label{sec:Proposal} % used for referring to this section from elsewhere
+
+In this investigation we will examine methods of detecting tidal tails and bridges at each snapshot of the simulation. 
+Using this information, we will then determine the fate of these structures as the simulation progresses, hoping to obtain a better understanding of when these structures form, how long they last, and where the material they are comprised resides at the end of the simulation.
+
+\subsection{Methods}
+
+In order to identify these tidal structures within the simulation, both density plots of the disk face on as well as velocity phase plots will be used. 
+Density plots of disk particles will be created of both the Milky Way and M31 at various snapshots throughout the simulation Fig.~\ref{fig:FaceOn_density}.
+
+\begin{figure}
+	\includegraphics[width=\columnwidth]{FaceOn_Density.png}
+    \caption{Face on Density Profile of M31 created using HiRes simulation snapshot 000 from \cite{van_der_Marel_Besla_2012}.}
+    \label{fig:FaceOn_density}
+\end{figure}
+
+These can be used to determine the existence of structures with lower density than the disk but higher than the background exist beyond the limits of the galaxy indicating material that has been ejected from the due to tidal forces. 
+In order to verify that these structures are tidal bridges or tails, rotation curves of disk particles for each galaxy will be created Fig.~\ref{fig:RotationCurve}.
+
+These plots will identify stars moving with similar velocities distinct from the disk away from the main galaxy. 
+These structures if they align with the density plot will be verified as tidal tails or bridges. 
+Given these velocity characteristics it will then be possible to associate if there is any dark matter or bulge particles which are associated with the structure
+
+\begin{figure}
+	\includegraphics[width=\columnwidth]{RotationCurve.png}
+    \caption{Rotaion curve of M31 created using HiRes simulation snapshot 000 from \cite{van_der_Marel_Besla_2012}.}
+    \label{fig:RotationCurve}
+\end{figure}
+
+With these features identified at various snapshots throughout the simulation it will then be possible to determine when they form. 
+Then by marking the particles (disk, dark matter, and bulge) which they are comprised of, it will be possible to track the structures throughout the simulation and determine their fate at various points in the simulation. 
+This will further determine when these structures no longer exist and thus how long these transient structures remain.
+
+\subsection{Hypothesis}
+
+During the Milky Way-M31 merger sequence, tidal tails of various prominence will form at each of the close encounters of the system. 
+The most pronounced of these features will persist throughout the length of the simulation. 
+Further, while the material will for the most part remain bound to the merger remnant, these tidal structures will potentially remain as seeds for tidal streams as M33 is tidally stripped.
+
+%%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{mnras}
+\bibliography{ASTR400B} 
+
+% Don't change these lines
+\bsp	% typesetting comment
+\label{lastpage}
+\end{document}
+
+% End of mnras_template.tex
