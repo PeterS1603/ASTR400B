@@ -10,6 +10,7 @@ Created on Mon Apr 21 22:58:24 2025
 
 #from Plotting_Snaps import RotateFrame
 #from CenterOfMass2 import CenterOfMass
+#from MassProfile import MassProfile
 #import matplotlib.pyplot as plt
 #from Tidal_features import read_indexed_stars
 #from Tidal_featires import get_selected_stars_txt
