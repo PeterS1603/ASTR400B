@@ -1,0 +1,235 @@
+% mnras_template.tex 
+%
+% LaTeX template for creating an MNRAS paper
+%
+% v3.0 released 14 May 2015
+% (version numbers match those of mnras.cls)
+%
+% Copyright (C) Royal Astronomical Society 2015
+% Authors:
+% Keith T. Smith (Royal Astronomical Society)
+
+% Change log
+%
+% v3.0 May 2015
+%    Renamed to match the new package name
+%    Version number matches mnras.cls
+%    A few minor tweaks to wording
+% v1.0 September 2013
+%    Beta testing only - never publicly released
+%    First version: a simple (ish) template for creating an MNRAS paper
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Basic setup. Most papers should leave these options alone.
+\documentclass[fleqn,usenatbib]{mnras}
+
+% MNRAS is set in Times font. If you don't have this installed (most LaTeX
+% installations will be fine) or prefer the old Computer Modern fonts, comment
+% out the following line
+\usepackage{newtxtext,newtxmath}
+% Depending on your LaTeX fonts installation, you might get better results with one of these:
+%\usepackage{mathptmx}
+%\usepackage{txfonts}
+
+% Use vector fonts, so it zooms properly in on-screen viewing software
+% Don't change these lines unless you know what you are doing
+\usepackage[T1]{fontenc}
+
+% Allow "Thomas van Noord" and "Simon de Laguarde" and alike to be sorted by "N" and "L" etc. in the bibliography.
+% Write the name in the bibliography as "\VAN{Noord}{Van}{van} Noord, Thomas"
+\DeclareRobustCommand{\VAN}[3]{#2}
+\let\VANthebibliography\thebibliography
+\def\thebibliography{\DeclareRobustCommand{\VAN}[3]{##3}\VANthebibliography}
+
+
+%%%%% AUTHORS - PLACE YOUR OWN PACKAGES HERE %%%%%
+
+% Only include extra packages if you really need them. Common packages are:
+\usepackage{graphicx}	% Including figure files
+\usepackage{amsmath}	% Advanced maths commands
+% \usepackage{amssymb}	% Extra maths symbols
+
+\usepackage{placeins}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% AUTHORS - PLACE YOUR OWN COMMANDS HERE %%%%%
+
+% Please keep new commands to a minimum, and use \newcommand not \def to avoid
+% overwriting existing commands. Example:
+%\newcommand{\pcm}{\,cm$^{-2}$}	% per cm-squared
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%%
+
+% Title of the paper, and the short title which is used in the headers.
+% Keep the title short and informative.
+\title{Tidal Features and Remnants in the Milky Way-M31 Merger}
+
+% The list of authors, and the short list which is used in the headers.
+% If you need two or more lines of authors, add an extra line using \newauthor
+\author[P. G. Shea]{
+Peter G. Shea$^{1}$
+\\
+% List of institutions
+$^{1}$Steward Observatory, The University of Arizona, 933 N Cherry Ave, Tucson 85719, US\\
+}
+
+% These dates will be filled out by the publisher
+% \date{Accepted XXX. Received YYY; in original form ZZZ}
+
+% Enter the current year, for the copyright statements etc.
+\pubyear{2025}
+
+% Don't change these lines
+\begin{document}
+\label{firstpage}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+\maketitle
+
+% Abstract of the paper
+\begin{abstract}
+N/A
+\end{abstract}
+
+% Select between one and six entries from the list of approved keywords.
+% Don't make up new ones.
+\begin{keywords}
+Tidal Tails -- Tidal Bridges -- Local Group -- Stellar Disk -- Gravitationally Bound
+\end{keywords}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+
+Galaxy merging events are the underlying principle of hierarchical galaxy formation theory which proposes accretion of smaller satellites play a significant role galaxy evolution \cite{Wang_Hammer_Athanassoula_Puech_Yang_Flores_2012}. 
+These events involve extreme tidal forces which often result in the creation of unique structures within these interacting systems. 
+Tidal tails and bridges are streams or spindles of stars and gas or dust which are ejected from their host galaxies throughout the merger process due to gravitational forces exerted on the material. 
+They often resemble extended spiral arms which reach out towards (bridge) and away (tail) from the companion satellite \cite{Toomre_Toomre_1972}. 
+The study of this form of mass loss and tidal debris provides significant insight into the initial conditions of merging systems, fate of stripped material, and the tidal forces involved in these events.
+
+
+Studying these tidal remnants of merging events is vital to understand galactic evolution. In particular, these structures can serve as a galactic fossil record of past interactions of galaxies and their satellites past or present \cite{Wang_Hammer_Athanassoula_Puech_Yang_Flores_2012}.  
+Based on the shape, prominence, and other physical characteristics of tidal tails and bridges it is possible to determine the strength of tidal forces, pro- and retrograde interactions, and how strongly bound the tail initially was with implications on star formation \cite{Privon_Barnes_Evans_Hibbard_Yun_Mazzarella_Armus_Surace_2013}. 
+By studying objects which present these features, it is possible to improve current models of galaxy evolution, structure, and merging events. 
+
+
+Current research on galaxy mergers has shown the ubiquitous nature of tidal tails and bridges in these systems and has helped to relate physical properties of these structures to characteristics of the merging system. 
+The orientation of these tails has been related to disk inclination of the encounters between the two objects and overall orbital geometry of the system \cite{Mihos_2004}. 
+Prograde and retrograde encounters also have been shown to created noticeable differences in the strength of the formed tails; prograde encounters create more significant tidal structures compared to retrograde \cite{Privon_Barnes_Evans_Hibbard_Yun_Mazzarella_Armus_Surace_2013}. 
+The length and symmetry of these structures created in both interacting galaxies during a merge has also been shown to largely be determined by the speed or severity of the encounter as well as the mass ratio of the objects \cite{Ji_Peirani_Yi_2014,Toomre_Toomre_1972}. 
+It been shown that slower encounters tend to create more significant tails and that smaller mass ratios result in more significant tidal features as seen in Fig.~\ref{fig:Ji2014_fig}. 
+However, to what extent these remnants can be used to reconstruct all aspects of merging events or identify past events remains open.
+
+\begin{figure}
+	\includegraphics[width=\columnwidth]{Ji2014_fig.png}
+    \caption{Mock images of two mass ratio 1:1 mergers taken from \cite{Ji_Peirani_Yi_2014}.}
+    \label{fig:Ji2014_fig}
+\end{figure}
+
+While many advances have been made in understanding these structures, there are several questions which remain unanswered. 
+Perhaps one of the largest is how long these tidal debris exist for and what their fate is as the system evolves. 
+The relatively faint nature of these structures has made them difficult to detect and therefore absent in many shallow surveys of galaxy populations. 
+Thus, it is unknown whether tidal remnants persist long after the coalescence of merging galaxies or that major mergers which produce these features remain relatively rare. 
+Further, it there has been very little exploration as to what becomes of these structures post-coalescence as they are mostly considered to be transient to the merge itself however some research suggest they could seed stellar streams \cite{Wang_Hammer_Athanassoula_Puech_Yang_Flores_2012}. 
+Addressing these questions as well as how to better identify these features is vital for furthering models of galaxy evolution.
+
+\section{This Project}
+
+In this investigation we will examine the creation of tidal tails and bridges during the Merger of M31 and the Milky Way. The specific snapshots used in this investigation will be determined by the orbital motion of the centers of mass of the Milky Way and M31 shortly after the periapsis and apoapsis of their orbit. These snapshots include: 275, 280, 285, 335, 340, 345, 410, 420, 425, 430, 435, 470, 475, and 480.
+Using this information, it will then be possible to identify disk particles that are within these tidal structures using velocity phase diagrams and track them as the simulation progresses.
+
+Through this investigation, we seek to better understand when in the process of merging these tidal structures are created and in the process identify the fate of this material after the merge has completed. By tracking the identified particles throughout the simulation, it will be possible to determine the lifespan of tidal tails and bridges, as well as if this material remains gravitationally bound to the merge remnant.
+
+Identifying when these structures form, their lifetime, and where this matter eventually ends up will greatly advance our understanding of how galaxies evolve after major merges. This study will help to further increase our understanding of the timeline of tidal structure formation by placing bridge and tail formation events concretely within the simulated merger. Further, by identifying the particles which create these features it is possible to recreate the life of these transient structures to identify lifetime and fate of the matter involved.
+
+\section{Methodology}
+
+The simulation used in this investigation is an N-body simulation of the three major objects of the Local Group -the Milky Way, M31, and M33 - produced by \cite{van_der_Marel_Besla_2012}. In this simulation, gravitational forces between all particles are approximated with the accuracy of this approximation being primarily determined by the distance between the particles. Further, three major components of these galaxies were modeled: the disk, bulge, and dark matter halo. For the galaxies modeled in this simulation, exponential profiles with scale length $R_{d}$ were used for disk profiles, bulge profiles where scaled with $R^{1/4}$, and dark matter halos were modeled using a hernquist profile. Further, M33 was modeled without a bulge due to its insignificant mass.
+
+In order to identify these tidal structures phase diagrams of both the Milky Way and M31 will be created using HiRes data in order to depict the velocity of particles along one axis vs their position in the disk. Clusters of particles which are outliers from the general shape of the phase plot are likely to be tidal tails or bridges and their comprising particles identified as shown in Fig. ~\ref{fig:Phase_box}. The particles which comprise them can then be identified and tracked through later simulations, most notably up to snap 801 which is the end of the simulation as shown in Fig. ~\ref{fig:Tracked_Stars}.
+
+\begin{figure}
+	\includegraphics[width=\columnwidth]{Assignment 6/PhaseBox.png}
+    \caption{A phase diagram of the Milky Way at snap 435 using HiRes data. The transparent red box is a plotting tool used to identify the index of particles within the specified region.}
+    \label{fig:Phase_box}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\columnwidth]{Assignment 6/test_tracked_stars.png}
+    \caption{A density plot of Milky Way disk particles at snap 100 looking face on to the disk. Black dots in this image are disk particles that were identified to be in the tidal tail or bridge in snap 435.}
+    \label{fig:Tracked_Stars}
+\end{figure}
+
+ Phase diagrams of both the Milky Way and M31 will be created at snaps 275, 280, 285, 335, 340, 345, 410, 420, 425, 430, 435, 470, 475, and 480. Each plot will be manually analyzed to determine the presence of tidal tails and bridges as shown in Fig. ~\ref{fig:Phase_box}. Disk particles which comprise the identified structures can then be recorded using their indices and tracked through the simulation and ultimately to its conclusion in snap 801 as shown in Fig. ~\ref{fig:Tracked_Stars}. By tracking these stars through the simulation it will be possible to determine the transient lifetime of these tidal structures during the merger process as well as determine where the disk particles which created these structures resided when the simulation ended. To do so, the fraction of particles identified as being part of a tidal tail or bridge and are beyond a radius which encloses most of the galaxy's mass, are tracked over the simulation snapshots of interest. This would present a view of how these tidal features evolve over the course of the simulation.
+
+During the Milky Way-M31 merger sequence, tidal tails of various prominence will form at each of the close encounters of the system. 
+The most pronounced of these features will persist throughout the length of the simulation. 
+Further, while the material will for the most part remain bound to the merger remnant, these tidal structures will potentially remain as seeds for tidal streams as M33 is tidally stripped.
+
+\section{Results}
+Through this investigation plots were created to show the location of all particles identified as part of a tidal feature within the key snapshots examined at the end state of the simulation. This was plotted upon a 2D-histogram of the face-on column density of the galaxy in order to examine the location of these particles relative to the merger remnant. As shown in Figs. ~\ref{fig:MW_EndSim} and ~\ref{fig:M31_EndSim} visually distinguishable tidal features were identified in snaps 335, 410, 425, 435, 470, and 480 for the Milky Way while they were only identified in snaps 335, 410, 425, and 470 for M31. it appears as if most disk particles identified in tidal features throughout the simulation reside within the disk of the merger remnant. In both cases visually it appears as if a majority of disk particles that are outside of the disk of the merger remnant are from the most recent tidal features identified in snap 470. Further, there is much more significant distribution of disk particles associated with tidal features from the Milky Way, compared to M31. This suggests that because of the unequal disk masses of the Milky Way and M31, more material is ejected from the disk of the Milky Way and it has taken longer for the material to re-accrete.
+
+\begin{figure}
+	\includegraphics[width=\columnwidth]{Assignment 6/MW_801_TidalTracking.pdf}
+    \caption{A density plot of Milky Way disk particles at snap 801 looking face on to the disk. Colored dots plotted over this represent disk particles associated with tidal features identified in snaps: 335, 410, 425, 435, 470, and 480. The circle centered on the center of mass represents the radius within which 95\% of the Milky Way's mass is contained. It is clear that the majority of tidal features which remain at the end of the simulation are mostly due to the tidal features identified in snap 470}
+    \label{fig:MW_EndSim}
+\end{figure}
+
+By tracking these identified particles throughout the simulation as well as calculating radii which enclose close to all the mass of each galaxy at each snapshot of interest, it is possible to determine a fraction these tidal features mass which remains distinct and beyond the main disk. These results are shown in Figs. ~\ref{fig:MW_TidalEvolution} and ~\ref{fig:M31_TidalEvolution}.In order to provide the most conclusive results, different values for the percentage of mass enclosed were chosen for each galaxy: 95\% for the Milky Way and 99\% for M31. These values were chosen experimentally by determining which produced results that clearly showed the evolution of these features throughout the simulation. From these figures, it is clear to see that there are rapid changes in the fraction of particles which exist beyond this critical radius shortly following both periapsis and apoapsis of the center of mass orbits of each galaxy. Further, there appear to be some tidal features which have a significantly larger portion of their component particles beyond this radius throughout the simulation and these appear to be from very early tidal features formed. 
+
+\begin{figure}
+	\includegraphics[width=\columnwidth]{Assignment 6/MW_TidalMassEvolution.pdf}
+    \caption{A figure depicting the fraction of particles identified in each tidal feature which are beyond a radius enclosing 95\% of the mass of the Milky Way for each snapshot of interest in this investigation. This figure supports the qualitative data in Fig. ~\ref{fig:MW_EndSim} in that tidal feature 470 is the most distinctly separable from the disk.}
+    \label{fig:MW_TidalEvolution}
+\end{figure}
+
+\section{Discussion}
+Analyzing the distribution of disk particles associated with tidal features in the Milky Way at the end of the simulation, it is clear that the tidal feature identified in snap 470 remains the most prominent at the end of the simulation. There are prominent tidal structures which are present beyond the disk and the critical radius containing 95\% of the mass of the Milky Way. This indicates that this feature which was created around the same time as the merging of the Milky Way and M31 persists until the end of the simulation. This supports the hypothesis of this investigation that major merger events will produce tidal features that persist until the end of the simulation. 
+
+These data suggest that that tidal features are indeed created during the merging process of galaxies process. The final merging process has the slowest relative speed of the centers of mass of each galaxy due to dynamical friction. This seems to correspond with the most prominent tidal features created around snap 470 as seen in Figs. ~\ref{fig:MW_EndSim} and ~\ref{fig:M31_EndSim}. This supports findings by \cite{Ji_Peirani_Yi_2014} which found that more significant tidal tails are created when encounters happen at slower relative velocities. Further, \cite{Ji_Peirani_Yi_2014} also suggests that less massive galaxies in the merger process will have much more significant tidal features. While The Milky Way and M31 are approximately the same mass, the disk of the Milky Way is less massive potentially suggesting why tidal features are more prominent at the end of the simulation for the Milky Way compared to M31. Overall, this finding improves our understanding of both the prominence and longevity of tidal features throughout the merger process as well as potentially how mass ratios of galaxy components may impact the strength of these features.
+
+While these results are promising, there are some major limitations as well. Most notably, as these features where identified visually and the particles selected using a rather unrefined technique of box selection, it is quite likely that some tidal features were not identified, that some particles comprising identified tidal features where not tracked, or that particles not part of these tidal features were erroneously included in these features. Further, due to formatting limitations it is not feasible to depict all snapshots where tidal features were identified significantly hindering the data which can be used to draw conclusions.
+
+To better understand how these tidal features evolve over the course of the simulation, Figs. ~\ref{fig:MW_TidalEvolution} and ~\ref{fig:M31_TidalEvolution} show the prominence of each tidal feature beyond a radius enclosing 95\% of the mass of the Milky Way and 99\% of the mass of M31 respectively. This was done to show when these features become prominent beyond the disk in a dynamic manner that would change as the disks of these galaxies evolved over the course of the merger. In Fig. ~\ref{fig:MW_TidalEvolution} it is clear that particles which compose tidal features 335 and 410 are primarily beyond the critical radii identified in these snapshots. The first apoapsis of the merge occurs around snapshot 335 and this clearly causes particles associated with all features but most prominently tidal feature 410 to migrate away from the disk however the change is not very dramatic in most tidal features. More noticeable is the final apoapsis and merge of the two galaxies around snapshots 425 and 470. Gere it is clear to see that around 425 there was a significant number of particles associated with tidal feature 425 which were ejected from the disk as well as interestingly particles associated with tidal feature 470. As the disk spread during the process of the merger many of the fractions decreased while those of 335 and 410 again increased. Finally at the end of the simulation it is clear to see that a majority of the particles in tidal feature 470 and 335 both exist beyond the merger remnant while closer to a third of the particles associated with the other tidal features are in this region.
+
+These data show that quite a large fraction of the material identified as comprising tidal features created early in the merger process can be found in the outer regions of the disk while later mergers produced tidal features comprised of disk material that was initially closer to the center as shown by the initial fractions of tidal feature mass. Further, these features indeed are created during both periapsis and apoapis points in the decaying orbit of the galaxies as they merge, similar to what is shown in ~\ref{fig:Ji2014_fig}. Finally, it is clear that a significant amount of the material which comprises these features remains remains gravitationally bound to the merger remnant, shown by rather low fractions for tidal features 410, 425, 435, and 480 as well as visually in Fig. ~\ref{fig:MW_EndSim} a significant amount of material attributed to major tidal features created during the last stages of the merger remain well beyond the disk at the end of the simulation indicating that not all matter remains bound.
+
+There are several limitations to these data which makes the draws into question the validity of there results. Most notably, the method used to identify particles belonging to a tidal structure allowed for particles to be counted as a part of more than one tidal feature. This could potentially lead to similar trends found in tidal features that are created at very different points in the merging process, most notably some similarities between tidal features 470 and 480 as well as 425, 435, and 410. Without knowing if accounting for this double counting it becomes far more difficult to determine the extent of the accuracy of these data. Further, as the disk becomes less cohesive throughout the merger, while calculating the radius within which a majority of the galaxy's mass is present does provide a dynamic radius for which it is possible to determine whether tidal features have been re-accreted into the disk, it is a rather crude method. This method works best when the disk is very circular which in many snapshots is not the case due to extreme tidal forces and this likely plays a major role in sharp changes in Fig ~\ref{fig:MW_TidalEvolution}. Finally, the limited time resolution of his data makes it difficult to determine when these features are created exactly and when they are no longer prominent within the system. This makes it both difficult to estimate when these features are created, when they are "destroyed", and how quickly these processes take pace.
+
+%%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{mnras}
+\bibliography{ASTR400B} 
+
+%%%%%%%%%%%%%%%%%%%% APPENDIX %%%%%%%%%%%%%%%%%%
+
+\appendix
+\section{M31 Final Data Figures}
+\subsection{Tidal Particle End of Simulation Distribution}
+\begin{figure}
+	\includegraphics[width=\columnwidth]{Assignment 6/M31_801_TidalTracking.pdf}
+    \caption{A density plot of M31 disk particles at snap 801 looking face on to the disk. Colored dots plotted over this represent disk particles associated with tidal features identified in snaps: 335, 410, 425, and 470.}
+    \label{fig:M31_EndSim}
+\end{figure}
+
+\subsection{Tidal Feature Evolution}
+\begin{figure}
+	\includegraphics[width=\columnwidth]{Assignment 6/M31_TidalMassEvolution.pdf}
+    \caption{A figure depicting the fraction of particles identified in each tidal feature which are beyond a radius enclosing 99\% of the mass of M31 for each snapshot of interest in this investigation.The circle centered on the center of mass represents the radius within which 99\% of the M31's mass is contained. Few particles associated with tidal features remain distinct from the disk at the end of the simulation; an exception to this is particles in snap 470.}
+    \label{fig:M31_TidalEvolution}
+\end{figure}
+
+
+
+
+% Don't change these lines
+\bsp	% typesetting comment
+\label{lastpage}
+\end{document}
+
+% End of mnras_template.tex
